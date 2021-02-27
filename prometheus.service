@@ -1,0 +1,10 @@
+[Unit]
+Description=Prometheus service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/prometheus-2.19.2.linux-amd64/prometheus --config.file /root/prometheus-2.19.2.linux-amd64/prometheus.yml
+
+[Install]
+WantedBy=multi-user.target
